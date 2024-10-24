@@ -1,0 +1,20 @@
+<div{{ attributes }}>
+    {% if guessed or maxTries is same as(tries) %}
+        <img src="{{ asset('images/perso-5.jpg') }}" />
+    {% else %}
+        <img src={{ asset('images/perso-' ~ tries ~ '.jpg') }} />
+    {% endif %}
+
+    {% if guessed or maxTries is same as(tries) %}
+        {{ character.description }}
+    {% else %}
+        <input type="text" data-model="nameGuessed" placeholder="Guess the character" />
+        <button
+            data-action="live#action" 
+            data-live-action-param="guess"
+        >
+            Guess
+        </button>
+    {% endif %}
+    
+</div>

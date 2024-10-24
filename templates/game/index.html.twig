@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello GameController!{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1>Hello Marvel Guess</h1>
+
+    {{ component('Guess', { 'character': character }) }}
+
+    {# <img src="{{ asset('images/perso-pix.jpg') }}"> #}
+    {# <img src="https://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg" /> #}
+    {# <div data-controller="game">
+        <div data-action="keyup->game#guess">
+            <input type="text" data-game-target="guess" placeholder="Guess a letter">
+            <div data-game-target="name">_ _ _ _ _ _ _ _ _ _</div>
+             
+        </div>
+    </div> #}
+</div>
+{% endblock %}
