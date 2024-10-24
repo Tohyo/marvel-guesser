@@ -31,7 +31,8 @@ final class GetMarvelCharacterMessageHandler
         $character = new Character(
             name: $response['data']['results'][0]['name'],
             description: $response['data']['results'][0]['description'],
-            date: new \DateTimeImmutable()
+            date: new \DateTimeImmutable(),
+            comics: $response['data']['results'][0]['comics']['items'],
         );
 
         $this->pixelate->generate($response['data']['results'][0]['thumbnail']['path'] . '.' . $response['data']['results'][0]['thumbnail']['extension']);

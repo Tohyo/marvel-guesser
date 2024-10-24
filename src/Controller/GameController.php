@@ -20,7 +20,7 @@ class GameController extends AbstractController
     #[Route('/', name: self::class)]
     public function __invoke(): Response
     {
-        $this->messageBus->dispatch(new GetMarvelCharacterMessage());
+        // $this->messageBus->dispatch(new GetMarvelCharacterMessage());
 
         return $this->render('game/index.html.twig', [
             'character' => $this->characterRepository->findCharacterOfTheDay()

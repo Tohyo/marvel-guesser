@@ -15,6 +15,10 @@
         >
             Guess
         </button>
+
+        {% for comic in character.comics %}
+            <p>{{ comic.name }}</p>
+        {% endfor %}
     {% endif %}
     
 </div>

@@ -23,7 +23,10 @@ class Character
         public ?string $description = null,
 
         #[ORM\Column(type: Types::DATETIME_IMMUTABLE)]
-        public ?DateTimeImmutable $date = null
+        public ?DateTimeImmutable $date = null,
+
+        #[ORM\Column(nullable: true)]
+        public ?array $comics = null
     ) {
     }
 }
